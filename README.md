@@ -4,7 +4,7 @@ consome a API Exchange Rate!</p>
 
 ### Como usar:
  
-- Basta informar o nome de uma moeda no formato "USD"Basta informar o nome de uma moeda no formato "USD"
+- Basta informar o nome de uma moeda no formato "USD"
 - Clicar no botão "Pesquisar"
 <p>Pronto, será mostrado os valores atualizados das principais moedas do mundo em relação à uma unidade de valor da moeda informada!</p>
 <p>para acessar a página <a href="http://" target="_blank" rel="noopener noreferrer">clique aqui</a>!</p>
