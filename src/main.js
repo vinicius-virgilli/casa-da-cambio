@@ -14,7 +14,7 @@ const createLi = (name, value) => {
   const li = document.createElement('li');
   li.classList.add('coin');
   const maxDecimal = 3;
-  li.innerHTML = `<div>${coinSymbol} ${name}</div>
+  li.innerHTML = `<div>${'<img src="./imagens/coinSymbol.svg">'} ${name}</div>
   <span>${Number(value.toFixed(maxDecimal))}</span>`;
   coinsList.appendChild(li);
 };
