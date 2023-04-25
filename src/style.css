@@ -76,13 +76,20 @@ label {
 }
 
 .coinsTitle {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.coinsTitle img {
+  height: 32px;
 }
 
 .coins {
   display: flex;
-  justify-content: space-around;
   flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
   overflow-y: auto;
   height: 500px;
   list-style-type: none;
@@ -91,10 +98,8 @@ label {
 
 .coin {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   box-sizing: border-box;
-  vertical-align: auto;
-  list-style: none;
   width: 190px;
   height: 44px;
   background: rgba(0, 0, 0, 0.4);

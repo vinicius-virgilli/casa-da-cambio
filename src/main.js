@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import './style.css';
+import { coinsInfo } from './coinsInfo';
 
 // Capturando elementos
 const searchedCoinEl = document.querySelector('#searchedInput');
@@ -52,11 +53,11 @@ const verifyInput = (searchedCoin, coinNames) => {
   return false;
 };
 
-// Função que cria os li
+// Função que cria o h2
 const createCoinsTitle = (searchedCoin) => {
   coinsTitle.innerHTML = '';
   const h2 = document.createElement('h2');
-  h2.innerHTML = `Valores referentes a 1 ${searchedCoin}`;
+  h2.innerHTML = `Valores referentes a 1 ${coinsInfo(searchedCoin)}`;
   coinsTitle.appendChild(h2);
 };
 
@@ -66,6 +67,7 @@ const getCoins = (urlBASE, searchedCoin) => fetch(`${urlBASE}${searchedCoin}`).
   then((data) => {
     coinsList.innerHTML = '';
     const coinNames = Object.keys(data.rates);
+    console.log(coinNames, coinNames.length);
     const coinValues = Object.values(data.rates);
     if (!verifyInput(searchedCoin, coinNames)) {
       createCoinsTitle(searchedCoin);
@@ -78,6 +80,6 @@ const getCoins = (urlBASE, searchedCoin) => fetch(`${urlBASE}${searchedCoin}`).
 // Evento de clique no botão Pesquisar
 searchBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  const searchedCoin = searchedCoinEl.value;
+  const searchedCoin = searchedCoinEl.value.toUpperCase();
   getCoins(urlBase, searchedCoin);
 });
